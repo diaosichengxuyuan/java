@@ -11,5 +11,7 @@ public class TestMyThreadLocal {
         MyThreadLocal.set("abc");
 
         System.out.println(MyThreadLocal.get());
+
+        System.out.println();
     }
 }
