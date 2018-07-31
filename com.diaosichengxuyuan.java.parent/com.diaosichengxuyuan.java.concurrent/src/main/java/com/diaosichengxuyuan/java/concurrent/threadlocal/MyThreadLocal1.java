@@ -1,6 +1,6 @@
 package com.diaosichengxuyuan.java.concurrent.threadlocal;
 
-public class MyThreadLocal {
+public class MyThreadLocal1 {
 
     private static final ThreadLocal<String> THREAD_LOCAL = new ThreadLocal<String>();
 

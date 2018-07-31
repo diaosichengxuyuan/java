@@ -7,10 +7,10 @@
     <groupId>com.diaosichengxuyuan.java</groupId>
     <artifactId>com.diaosichengxuyuan.java.parent</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <modules>
         <module>com.diaosichengxuyuan.java.concurrent</module>
     </modules>
-    <packaging>pom</packaging>
 
     <dependencyManagement>
         <dependencies>
