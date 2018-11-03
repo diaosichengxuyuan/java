@@ -7,40 +7,18 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * 测试1.8新特性
- * <p>
- * Consumer<T> :消费型接口
- * void accept(T t);
- *
- * Supplier<T> :供给型接口
- * T get();
- *
- * Function<T,R> :函数型接口
- * R apply(T t);
- *
- * Predicate<T>:断言型接口
- * boolean test(T t);
+ * stream常用接口
  *
  * @author liuhaipeng
  * @date 2018/11/2
  */
-public class TestNewFeature {
-
-    /**
-     * Print接口如果是泛型接口，lambda表达式支持 Print接口如果不是泛型接口，print方法是泛型方法，lambda表达式不支持
-     * 参考：https://docs.oracle.com/javase/specs/jls/se8/html/jls-15.html#jls-15.27.3
-     */
-    @Test
-    public void testLambda() {
-        Print p = t -> System.out.println(t.toString());
-        p.print("lhp");
-    }
+public class TestStream {
 
     /**
      * 详解：https://github.com/diaosichengxuyuan/java/issues/3
      */
     @Test
-    public void testStreamFilterMapCollect() {
+    public void testFilterMapCollect() {
         List<String> ss = new ArrayList<>(10);
         ss.add("lhp1");
         ss.add("lhp2");
@@ -71,7 +49,7 @@ public class TestNewFeature {
      * 详解：https://github.com/diaosichengxuyuan/java/issues/4
      */
     @Test
-    public void testStreamAllMatchAnyMatch() {
+    public void testAllMatchAnyMatch() {
         List<String> ss = new ArrayList<>(10);
         ss.add("lhp1");
         ss.add("lhp2");
@@ -95,7 +73,7 @@ public class TestNewFeature {
      * max/min采用选择排序中的一趟选择，就可以选择出最大或者最小的
      */
     @Test
-    public void testStreamMaxMin() {
+    public void testMaxMin() {
         List<String> ss = new ArrayList<>(10);
         ss.add("lhp3");
         ss.add("lhp1");
@@ -119,7 +97,7 @@ public class TestNewFeature {
      * sort调用Arrays.sort，jdk1.8底层是二分插入排序，jdk1.6是归并排序
      */
     @Test
-    public void testStreamSorted() {
+    public void testSorted() {
         List<String> ss = new ArrayList<>(10);
         ss.add("lhp3");
         ss.add("lhp1");
@@ -134,7 +112,7 @@ public class TestNewFeature {
     }
 
     @Test
-    public void testStreamFlatMap() {
+    public void testFlatMap() {
         List<String> ss = new ArrayList<>(10);
         ss.add("lhp1");
         ss.add("lhp2");
@@ -146,7 +124,7 @@ public class TestNewFeature {
     }
 
     @Test
-    public void testStreamReduce() {
+    public void testReduce() {
         List<String> ss = new ArrayList<>(10);
         ss.add("lhp1");
         ss.add("lhp2");
