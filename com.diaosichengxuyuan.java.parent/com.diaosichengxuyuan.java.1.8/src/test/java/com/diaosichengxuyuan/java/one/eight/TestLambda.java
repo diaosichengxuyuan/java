@@ -24,12 +24,18 @@ import org.junit.Test;
 public class TestLambda {
 
     /**
-     * Print接口如果是泛型接口，lambda表达式支持 Print接口如果不是泛型接口，print方法是泛型方法，lambda表达式不支持
-     * 参考：https://docs.oracle.com/javase/specs/jls/se8/html/jls-15.html#jls-15.27.3
+     * Print接口如果是泛型接口，lambda表达式支持 Print接口如果不是泛型接口，print方法是泛型方法，lambda表达式不支持 参考：https://docs.oracle
+     * .com/javase/specs/jls/se8/html/jls-15.html#jls-15.27.3
      */
     @Test
     public void testLambda() {
         Print p = t -> System.out.println(t.toString());
+        p.print("lhp");
+    }
+
+    @Test
+    public void testFunction() {
+        Print<Object> p = System.out::println;
         p.print("lhp");
     }
 }
