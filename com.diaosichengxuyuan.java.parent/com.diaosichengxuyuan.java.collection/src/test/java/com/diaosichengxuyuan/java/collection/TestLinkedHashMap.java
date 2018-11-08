@@ -2,21 +2,22 @@ package com.diaosichengxuyuan.java.collection;
 
 import org.junit.Test;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * ConcurrentHashMap，详解：https://github.com/diaosichengxuyuan/java/issues/13 https://github.com/diaosichengxuyuan/java/issues/14
+ * LinkedHashMap，详解：https://github.com/diaosichengxuyuan/java/issues/16
  *
  * @author liuhaipeng
  * @date 2018/11/6
  */
-public class TestConcurrentHashMap {
+public class TestLinkedHashMap {
 
     @Test
     public void test() {
-        Map<String, Integer> map = new ConcurrentHashMap<>(4);
+        Map<String, Integer> map = new LinkedHashMap<>(16, 0.75F, true);
         map.put("1", Integer.valueOf(1));
         map.put("2", Integer.valueOf(2));
         map.put("3", Integer.valueOf(3));
@@ -32,6 +33,11 @@ public class TestConcurrentHashMap {
 
         Integer i = map.get("3");
         System.out.println(i);
+        i = map.get("4");
+        System.out.println(i);
+        i = map.get("5");
+        System.out.println(i);
+        System.out.println(map);
 
         i = map.remove("2");
         System.out.println(map);
@@ -42,5 +48,9 @@ public class TestConcurrentHashMap {
         int size = map.size();
         System.out.println(size);
 
+        Set<Map.Entry<String, Integer>> entries = map.entrySet();
+        for(Map.Entry entry : entries) {
+            System.out.println(entry);
+        }
     }
 }
