@@ -41,6 +41,5 @@ public class TestConcurrentHashMap {
 
         int size = map.size();
         System.out.println(size);
-
     }
 }
