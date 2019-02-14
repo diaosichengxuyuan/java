@@ -24,6 +24,7 @@
         <module>com.diaosichengxuyuan.java.1.8</module>
         <module>com.diaosichengxuyuan.java.proxy</module>
         <module>com.diaosichengxuyuan.java.collection</module>
+        <module>com.diaosichengxuyuan.java.design.mode</module>
     </modules>
 
     <dependencyManagement>
