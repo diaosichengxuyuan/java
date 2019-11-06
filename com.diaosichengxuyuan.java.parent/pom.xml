@@ -17,6 +17,7 @@
         <commons.lang3.version>3.5</commons.lang3.version>
         <cglib.version>2.2.2</cglib.version>
         <junit.version>4.12</junit.version>
+        <jmxtools.version>1.2.1</jmxtools.version>
     </properties>
 
     <modules>
@@ -25,6 +26,7 @@
         <module>com.diaosichengxuyuan.java.proxy</module>
         <module>com.diaosichengxuyuan.java.collection</module>
         <module>com.diaosichengxuyuan.java.design.mode</module>
+        <module>com.diaosichengxuyuan.java.management</module>
     </modules>
 
     <dependencyManagement>
@@ -51,6 +53,11 @@
                 <groupId>cglib</groupId>
                 <artifactId>cglib</artifactId>
                 <version>${cglib.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.jdmk</groupId>
+                <artifactId>jmxtools</artifactId>
+                <version>${jmxtools.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
