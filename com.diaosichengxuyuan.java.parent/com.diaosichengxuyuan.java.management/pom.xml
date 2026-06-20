@@ -11,10 +11,5 @@
 
     <artifactId>com.diaosichengxuyuan.java.management</artifactId>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.sun.jdmk</groupId>
-            <artifactId>jmxtools</artifactId>
-        </dependency>
-    </dependencies>
+
 </project>
