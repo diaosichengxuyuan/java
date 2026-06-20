@@ -9,7 +9,7 @@ public class TestMyThreadLocal {
         System.out.println(MyThreadLocal1.get());
         System.out.println(MyThreadLocal2.get());
 
-        MyThreadLocal1.set("abc");
+        MyThreadLocal1.set("abcabc");
         MyThreadLocal1.set("efg");
 
         MyThreadLocal2.set("abc");
